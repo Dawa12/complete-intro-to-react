@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // flow-typed signature: a1c954c4ab3268900025db22e3f5c812
 // flow-typed version: ab26bc3472/jest_v20.x.x/flow_>=v0.33.x
+=======
+// flow-typed signature: 336a37cc59a5628d581d11f98d1d94ab
+// flow-typed version: ef52b40a4e/jest_v20.x.x/flow_>=v0.33.x
+>>>>>>> v3-14
 
 type JestMockFn = {
   (...args: Array<any>): any,
@@ -233,6 +238,7 @@ type JestExpectType = {
   toMatchSnapshot(name?: string): void,
   /**
    * Use .toThrow to test that a function throws when it is called.
+<<<<<<< HEAD
    */
   toThrow(message?: string | Error): void,
   /**
@@ -240,6 +246,15 @@ type JestExpectType = {
    * is called. The argument can be a string for the error message, a class for
    * the error, or a regex that should match the error.
    */
+=======
+   * If you want to test that a specific error gets thrown, you can provide an
+   * argument to toThrow. The argument can be a string for the error message,
+   * a class for the error, or a regex that should match the error.
+   *
+   * Alias: .toThrowError
+   */
+  toThrow(message?: string | Error | RegExp): void,
+>>>>>>> v3-14
   toThrowError(message?: string | Error | RegExp): void,
   /**
    * Use .toThrowErrorMatchingSnapshot to test that a function throws a error

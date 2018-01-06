@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+<<<<<<< HEAD
 import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import type { Match } from 'react-router-dom';
@@ -32,6 +33,24 @@ const App = () => (
       />
     </div>
   </Provider>
+=======
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Landing from './Landing';
+import Search from './Search';
+
+const FourOhFour = () => <h1>404</h1>;
+
+const App = () => (
+  <BrowserRouter>
+    <div className="app">
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/search" component={Search} />
+        <Route component={FourOhFour} />
+      </Switch>
+    </div>
+  </BrowserRouter>
+>>>>>>> v3-14
 );
 
 export default App;
