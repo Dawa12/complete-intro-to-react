@@ -28,7 +28,10 @@ module.exports = {
     reasons: true,
     chunks: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ],
   module: {
     rules: [
       {
